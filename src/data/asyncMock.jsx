@@ -1,24 +1,24 @@
 export const productos = [
     {
       id: 1,
-      nombre: "Remera Rick",
-      precio: 8500,
+      nombre: "Impresoras 3D FDM  Extrusión de Material.",
+      precio: 85000,
       categoria: "Remeras",
-      stock: 5,
+      stock: 1,
       descripcion:
-        "Las remeras son 100% algodón peinado 24/1 (Premium).No se deforman, ni pierden el color.",
-      img: "https://http2.mlstatic.com/D_NQ_NP_751255-MLA31037228606_062019-O.webp",
+        "Este proceso se desarrolla en un motor que empuja el filamento de plástico, el cual pasa por una boquilla previamente calentada, lo derrite y lo deposita sobre la cama o base de la impresora, en las coordenadas que le hemos indicado.",
+      img: src="https://i.ibb.co/gmpz5hy/maquina-Chica.jpg",
     },
    
     {
-      id: 5,
-      nombre: "Zapatillas De Lona Pintadas A Mano Rick And Morty",
-      precio: 14900,
+      id: 2,
+      nombre: "Impresoras 3D Resina SLA.",
+      precio: 149000,
       categoria: "Zapatillas",
       stock: 5,
       descripcion:
-        "Zapatilla de lona reforzada. Pintada a mano con pintura de calidad.",
-      img: "https://http2.mlstatic.com/D_NQ_NP_958920-MLA53230449583_012023-O.webp",
+        "Funcionan con un tanque de resina para imprimir en 3D foto polimérica y un rayo láser UV que recorre la forma de la capa y va solidificando la resina dando forma a la pieza capa a capa.",
+      img: "https://servitec3d.com/wp-content/uploads/2020/06/tipo-impresora-3d-dlp.jpg",
     },
   ];
 export default productos;
@@ -27,28 +27,6 @@ export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(productos);
-    }, 2000);
-  });
-};
-
-export const getProductById = (id) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const productoFiltrado = productos.find(
-        (prod) => prod.id === parseInt(id)
-      );
-      resolve(productoFiltrado);
-    }, 2000);
-  });
-};
-
-export const getProductsByCategory = (category) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const productosFiltrados = productos.filter(
-        (prod) => prod.categoria === category
-      );
-      resolve(productosFiltrados);
     }, 2000);
   });
 };

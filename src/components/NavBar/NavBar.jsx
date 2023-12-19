@@ -21,9 +21,9 @@ const NavBar = () => {
                     Categorías
                 </MenuButton>
                 <MenuList >
-                    <MenuItem>Remeras</MenuItem>
-                    <MenuItem>Pantalones</MenuItem>
-                    <MenuItem>Buzos</MenuItem>
+                    <MenuItem>Resina</MenuItem>
+                    <MenuItem>Fsv</MenuItem>
+                    <MenuItem>Proximamente</MenuItem>
                 </MenuList>
                 </Menu>
                 <CartWidget />

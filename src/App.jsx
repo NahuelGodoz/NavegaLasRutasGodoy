@@ -3,15 +3,18 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar'
 // import ItemListContainer from './components/ItemLIstContainer/ItemLIstContainer'
 
+
+
 function App() {
   
 
   return (
     <>
-    <ChakraProvider>
+   <ChakraProvider>
     <NavBar/>
     
     </ChakraProvider>
+    
     </>
   )
 }
