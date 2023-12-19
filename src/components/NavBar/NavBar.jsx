@@ -1,28 +1,35 @@
-import React from 'react'
-import CardWidget from '../CardWidget/CardWidget'
+import { Flex, Box, Link, Spacer, Heading, Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react';
+import { BsChevronDown } from 'react-icons/bs';
+import logo from "../../assets/logo.png"
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
-  return (
-    <div>
-    <header className='header'>
-         <nav className="header_navbar">
-             
-             <div className="header_navbar-div">
-                 
-                 <ul className='header_navbar-div-ul'>
-                     <li className='header_navbar-a'><a href="" className='ar'>INICIO</a></li>
-                     <li className='header_navbar-a'><a href="" className='ar'>OFERTAS</a></li>
-                     
-                     <li className='header_navbar-a'><a href="" className='ar'><CardWidget/>CARRITO</a></li>
-                     
-                 </ul>
-             </div>
+    return (
+        <Flex p="4" bg="Black" align="center">
+            <Box p="2">
+                <Heading size="md" color="white">
+                <img src={logo} width={'20%'} alt="Logo" />
+                </Heading>
+            </Box>
+            <Spacer />
+            <Box display="flex" alignItems="center">
+                <Link color="white" mr="6">
+                Inicio
+                </Link >
+                <Menu >
+                <MenuButton mr="6" as={Button} rightIcon={<BsChevronDown /> } width="180px" >
+                    Categorías
+                </MenuButton>
+                <MenuList >
+                    <MenuItem>Remeras</MenuItem>
+                    <MenuItem>Pantalones</MenuItem>
+                    <MenuItem>Buzos</MenuItem>
+                </MenuList>
+                </Menu>
+                <CartWidget />
+            </Box>
+        </Flex>
+    );
+};
 
-         </nav>
-     </header>
- 
- </div>
-)
-}
-
-export default NavBar
+export default NavBar;
