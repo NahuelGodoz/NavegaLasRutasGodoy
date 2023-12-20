@@ -17,13 +17,13 @@ const ItemListContainer = ({ title }) => {
 
 return(
 	
-        <Flex direction={'column'} justify={'center'}  align={'center'} m={4} > 
+        <Flex direction={'column'} justify={'center'}  m={4} > 
            <Box>
-                <Heading >{title}</Heading>
+                <Heading font >{title}</Heading>
             </Box>
             <ItemList data={data} />
             </Flex>
             )
         }
 
-        export default ItemListContainer
+export default ItemListContainer

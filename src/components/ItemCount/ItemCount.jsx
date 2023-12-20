@@ -2,6 +2,7 @@ import React from 'react'
 import useCounter from '../hooks/useCounter'
 import { Button, Box, Heading } from '@chakra-ui/react'
 
+
 const ItemCount = ({initial, stock}) => {
     const { count, increment, decrement } = useCounter(initial, stock)
 
