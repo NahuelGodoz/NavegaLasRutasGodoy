@@ -13,7 +13,7 @@ function App() {
     <>
    <ChakraProvider>
     <NavBar/>
-    <ItemListContainer title = 'tiendita'/>
+    <ItemListContainer title = 'Mundo 3D'/>
     </ChakraProvider>
     
     </>
