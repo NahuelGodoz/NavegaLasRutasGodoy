@@ -7,6 +7,7 @@ const productos = [
       precio:15000,
       categoria:"Fsv",
       stock:24,
+    
     },
    
     {
@@ -18,13 +19,45 @@ const productos = [
       categoria:"Resina",
       stock:34,
     },
+    {
+      id: 3,
+      nombre: "Buzo peace among worlds",
+      precio: 13000,
+      categoria: "Buzos",
+      stock: 5,
+      descripcion:
+        "Buzo Unisex 100% Algodón. Cuello Redondo con refuerzo en los cuellos y mangas",
+      img: "https://acdn.mitiendanube.com/stores/605/358/products/165bn1-68089a57bae4b2579916833144477754-1024-1024.png",
+    },
   ];
-// export default productos;
+export default productos;
 
 export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(productos);
+    }, 2000);
+  });
+};
+
+export const getProductById = (id) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const productoFiltrado = productos.find (
+        (prod) => prod.id === parseInt(id)
+      );
+      resolve(productoFiltrado);
+    }, 2000);
+  });
+};
+
+export const getProductsByCategory = (category) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const productosFiltrados = productos.filter(
+        (prod) => prod.categoria === category
+      );
+      resolve(productosFiltrados);
     }, 2000);
   });
 };

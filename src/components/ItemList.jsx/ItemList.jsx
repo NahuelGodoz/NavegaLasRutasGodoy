@@ -1,41 +1,27 @@
 import React from 'react'
 import Item from '../Item/Item'
 
-// import { Box, Flex } from '@chakra-ui/react'
-
-// const ItemList = ({ data }) => {
-//   return (
-//     <Flex flexWrap="wrap" justifyContent="space-around">
-
-//         {data.map((productos) => (
-//             <Box 
-//               key={productos.id} 
-//               boxShadow='lg' 
-//               m={2}
-//               maxW="sm"  
-//               minW="sm"
-//               >
-//                 <Item {...productos}  />
-//             </Box>
-//         ))}
-//     </Flex>
-//   )
-// }
+import { Box, Flex } from '@chakra-ui/react'
 
 const ItemList = ({ data }) => {
-    console.log(data)
   return (
-      <div>
+    <Flex flexWrap="wrap" justifyContent="space-around">
 
         {data.map((productos) => (
-          <div key={productos.id}>
-            <Item {...productos}/>
-          </div>
-        
-          ))}
+            <Box 
+              key={productos.id} 
+              boxShadow='lg' 
+              m={2}
+              maxW="sm"  
+              minW="sm"
+              >
+                <Item {...productos}  />
+            </Box>
+        ))}
+    </Flex>
+  )
+}
 
-      </div>
-    
-  )}
+
 
 export default ItemList
